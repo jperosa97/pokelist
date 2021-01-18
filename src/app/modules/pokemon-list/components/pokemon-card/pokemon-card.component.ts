@@ -1,4 +1,4 @@
-import { TypesEnum, Color } from '../../../../shared/enums/color.enum';
+import { TypesEnum} from '../../../../shared/enums/color.enum';
 import { Pokemon } from '../../../../shared/models/pokemon.model';
 import { Component, Input } from '@angular/core';
 
@@ -15,7 +15,7 @@ import { fade } from 'src/app/shared/animations/fade';
 export class PokemonCardComponent {
   @Input() pokemon!: Pokemon;
   typeEnum = TypesEnum;
-  color = new Color();
+
   constructor(
     private pokemonImageService: PokemonImageService,
     private router: Router,

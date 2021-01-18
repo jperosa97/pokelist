@@ -34,7 +34,6 @@
   top: 48px;
   left: 18em;
   border: solid 1px rgb(236, 240, 241, 0.4);
-  background-color:rgb(236, 240, 241, 0.4);
   border-radius: 320px 20px;
 }
 
@@ -69,24 +68,28 @@
 
 .detail__info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   top: 10em;
 }
 
-.detail__info ul {
+.detail__info .pokemonInfo{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+}
+.detail__info .pokemonInfo li{
+  display: flex;
   align-items: center;
 }
 
-.detail__info ul li {
-  list-style: none;
+
+.pokemonInfo .pokemonStatur {
+  margin: 10px;
+  font-size: 25px;
 }
 
-.detail__info ul li h2 {
-  font-size: 30px;
-
+.ability {
+  font-size: 25px;
 }
 
 .mat-tab-group {

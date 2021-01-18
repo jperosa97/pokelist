@@ -7,8 +7,9 @@
       <strong class="title">{{ pokemon.name }}</strong>
     </div>
     <div class="detail__type">
-      <p *ngFor="let type of pokemon.types"> {{ type.type.name }}</p>
+      <p *ngFor="let type of pokemon.types"  [style.background]="getTypeColour(type?.type?.name)"> {{ type.type.name }}</p>
     </div>
+    
   </header>
   <!--Pokemon Image -->
   <div class="detail__image">
@@ -18,45 +19,37 @@
   <div class="detail__description">
     <h1 class="pokemonTitle">Pokemon Info</h1>
     <div class="detail__info">
-      <mat-tab-group mat-align-tabs="start">
-        <mat-tab label="First"><ul>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Allgemeine Info">
+          <ul class="pokemonInfo">
+            <li> 
+              <h2>Experience: </h2> 
+              <p class="pokemonStatur">{{ pokemon.base_experience }}</p>
+              </li>
+            <li><h2>Gewicht: </h2> 
+              <p class="pokemonStatur">{{ (pokemon.weight * 100) / 1000 }} kg</p>
+              </li>
+            <li> <h2>Grösse: </h2> 
+              <p class="pokemonStatur">{{ pokemon.height * 10 }} cm </p>
+             </li>
+         
+          </ul>
+      </mat-tab>
+      <mat-tab label="Statistic">
+        <ul class="pokemonInfo" *ngFor="let stat of pokemon.stats">
           <li>
-            <h2>Experience: {{ pokemon.base_experience }} </h2> 
-          </li>
-          <li>
-            <h2>Gewicht: {{ (pokemon.weight * 100) / 1000 }} kg </h2> 
-          </li>
-          <li>   
-            <h2>Grösse: {{ pokemon.height * 10 }} cm </h2> 
-            
+            <h2>
+              {{ stat.stat.name }}:
+            </h2>
+            <p class="pokemonStatur">{{ stat.base_stat }}</p>
           </li>
         </ul>
       </mat-tab>
-        <mat-tab label="Second">
-          <ul>
-          <li class="ability" *ngFor="let stat of pokemon.stats">
-            <h2>
-              {{ stat.stat.name }}: {{ stat.base_stat }}
-            </h2>
-            
-          </li>
-          </ul>
-        </mat-tab>
-        <mat-tab label="Third">Content 3</mat-tab>
+        <mat-tab label="Abilities">
+          <p class="ability" *ngFor="let abilitie of pokemon.abilities">{{ abilitie.ability.name }}</p>
+      </mat-tab>
       </mat-tab-group>
-      
-    <ul>
-      
-      
-      <li class="ability" *ngFor="let abilitie of pokemon.abilities">
-        <h2> Abilities: {{ abilitie.ability.name }} </h2>
-      
-      </li>
-    
-    </ul>
   </div>
- 
- 
    <!--Pokemon Info Ende -->
   </div>
 </section>

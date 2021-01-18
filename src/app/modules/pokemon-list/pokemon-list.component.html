@@ -1,0 +1,10 @@
+<app-search (typing)="setFilterValue($event)" [value]="filter"></app-search>
+
+<div *ngIf="pokemons" class="cards">
+  <app-pokemon-card
+    *ngFor="let pokemon of (pokemons | filterByName: filter)"
+    [pokemon]="pokemon"
+  >
+  </app-pokemon-card>
+</div>
+<!-- <app-search (typing)="setFilterValue($event)" [value]="filter"></app-search> -->

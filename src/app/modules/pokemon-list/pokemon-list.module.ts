@@ -7,6 +7,8 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PokemonListRoutingModule } from './pokemon-routing.module';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 @NgModule({
   imports: [
@@ -14,7 +16,8 @@ import { PokemonListRoutingModule } from './pokemon-routing.module';
     HttpClientModule,
     SharedModule,
     RouterModule,
-    PokemonListRoutingModule,
+    MatPaginatorModule,
+    PokemonListRoutingModule
   ],
   declarations: [FilterByName, PokemonCardComponent, PokemonListComponent],
 })

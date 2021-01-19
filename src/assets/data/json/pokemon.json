@@ -6250,6 +6250,42 @@
       "color": 5,
       "type_1": "dark",
       "type_2": "grass"
+    },
+    {
+      "id": 894,
+      "name": "Regieleki",
+      "color": 5,
+      "type_1": "electric",
+      "type_2": ""
+    },
+    {
+      "id": 895,
+      "name": "Regidrago",
+      "color": 5,
+      "type_1": "dragon",
+      "type_2": ""
+    },
+    {
+      "id": 896,
+      "name": "Glastrier",
+      "color": 5,
+      "type_1": "ice",
+      "type_2": ""
+    },
+    {
+      "id": 897,
+      "name": "Spectrier",
+      "color": 5,
+      "type_1": "ghost",
+      "type_2": ""
+    }
+    ,
+    {
+      "id": 898,
+      "name": "Calyrex ",
+      "color": 5,
+      "type_1": "psychic",
+      "type_2": "grass"
     }
   ]
 }

@@ -48,9 +48,12 @@
         <mat-tab label="Abilities">
           <p class="ability" *ngFor="let abilitie of pokemon.abilities">{{ abilitie.ability.name }}</p>
       </mat-tab>
+      <mat-tab label="Region">
+     <h3 class="region">{{ pokemon.generation }}</h3>
+    </mat-tab>
       </mat-tab-group>
   </div>
-   <!--Pokemon Info Ende -->
+   <!--Pokemon Info Ende   <h3 class="name">{{ pokemon.generation }}</h3>-->
   </div>
 </section>
 

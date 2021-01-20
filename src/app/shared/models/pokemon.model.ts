@@ -25,4 +25,5 @@ export interface Pokemon {
   image: string;
   color: string | null;
   types: any[];
+  generation: string;
 }

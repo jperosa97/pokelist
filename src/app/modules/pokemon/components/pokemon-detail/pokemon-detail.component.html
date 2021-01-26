@@ -2,6 +2,7 @@
   *ngIf="pokemon$ | async as pokemon"  class="detail" >
   <!--Pokemon ID, Name und Type-->
   <header class="detail__content">
+  
     <div class="detail__header">
       <span>#{{ pokemon.id }} </span>
       <strong class="title">{{ pokemon.name }}</strong>
@@ -16,9 +17,9 @@
     <img [src]="pokemon.image" [title]="pokemon.name" [alt]="pokemon.name" />
   </div>
   <!--Pokemon Info start-->
-  <div class="detail__description">
+  <div class="detail__description" >
     <h1 class="pokemonTitle">Pokemon Info</h1>
-    <div class="detail__info">
+    <div class="detail__info" >
       <mat-tab-group mat-align-tabs="center">
         <mat-tab label="Allgemeine Info">
           <ul class="pokemonInfo">
@@ -31,7 +32,8 @@
               </li>
             <li> <h2>Grösse: </h2> 
               <p class="pokemonStatur">{{ pokemon.height * 10 }} cm </p>
-             </li>
+             
+            </li>
          
           </ul>
       </mat-tab>
@@ -48,12 +50,12 @@
         <mat-tab label="Abilities">
           <p class="ability" *ngFor="let abilitie of pokemon.abilities">{{ abilitie.ability.name }}</p>
       </mat-tab>
-      <mat-tab label="Region">
-     <h3 class="region">{{ pokemon.generation }}</h3>
+      <mat-tab label="Evolution">
+     
     </mat-tab>
       </mat-tab-group>
   </div>
-   <!--Pokemon Info Ende   <h3 class="name">{{ pokemon.generation }}</h3>-->
+   <!--Pokemon Info Ende-->
   </div>
 </section>
 

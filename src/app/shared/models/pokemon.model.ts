@@ -26,4 +26,5 @@ export interface Pokemon {
   color: string | null;
   types: any[];
   generation: string;
+  evolution_chain: any;
 }

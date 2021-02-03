@@ -75,21 +75,45 @@
 .detail__info .pokemonInfo{
   display: flex;
   flex-direction: column;
-
-}
-.detail__info .pokemonInfo li{
-  display: flex;
   align-items: center;
 }
 
-
-.pokemonInfo .pokemonStatur {
-  margin: 10px;
+.detail__info .pokemonInfo li{
+  display: flex;
+  align-items: center;
+  width: 27vw;
+  height: 6vh;
+}
+.pokemonInfo .pokemonDetail {
+  width: 15em;
+  display: flex;
   font-size: 25px;
+  justify-content: flex-end;
+  position: absolute;
+}
+
+.pokemonInfo .pokemonDetail .pokemonBasic {
+  border: solid 1px rgba(202, 68, 51, 0.4);
+  background-color: #ca4433;
+  border-radius: 320px 20px;
+  width: 115px;
+  display: flex;
+  justify-content: center;
+}
+
+.pokemonInfo .pokemonDetail .pokemonStatur {
+  border: solid 1px rgba(202, 68, 51, 0.4);
+  background-color: #ca4433;
+  border-radius: 320px 20px;
+  width: 5vw;
+  display: flex;
+  justify-content: center;
 }
 
 .ability {
   font-size: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .mat-tab-group {

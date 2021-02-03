@@ -25,16 +25,21 @@
           <ul class="pokemonInfo">
             <li> 
               <h2>Experience: </h2> 
-              <p class="pokemonStatur">{{ pokemon.base_experience }}</p>
+              <div class="pokemonDetail">
+              <p class="pokemonBasic">{{ pokemon.base_experience }}</p>
+              </div>
               </li>
             <li><h2>Gewicht: </h2> 
-              <p class="pokemonStatur">{{ (pokemon.weight * 100) / 1000 }} kg</p>
+              <div class="pokemonDetail">
+              <p class="pokemonBasic">{{ (pokemon.weight * 100) / 1000 }} kg</p>
+              </div>
               </li>
             <li> <h2>Grösse: </h2> 
-              <p class="pokemonStatur">{{ pokemon.height * 10 }} cm </p>
-             
+              <div class="pokemonDetail">
+                <p class="pokemonBasic">{{ pokemon.height * 10 }} cm</p>
+              </div>
             </li>
-         
+          <li><h2>Evolution: </h2> </li>
           </ul>
       </mat-tab>
       <mat-tab label="Statistic">
@@ -42,16 +47,20 @@
           <li>
             <h2>
               {{ stat.stat.name }}:
+             
             </h2>
-            <p class="pokemonStatur">{{ stat.base_stat }}</p>
+            <div class="pokemonDetail">
+              <p class="pokemonStatur">{{ stat.base_stat }}</p>
+            </div>
+            
           </li>
         </ul>
       </mat-tab>
         <mat-tab label="Abilities">
           <p class="ability" *ngFor="let abilitie of pokemon.abilities">{{ abilitie.ability.name }}</p>
       </mat-tab>
-      <mat-tab label="Evolution">
-     
+      <mat-tab label="Schwächen">
+        
     </mat-tab>
       </mat-tab-group>
   </div>
